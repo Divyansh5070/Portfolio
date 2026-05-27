@@ -7,8 +7,8 @@ export const personalInfo = {
   bio: "Software Engineering student with strong foundations in Data Structures, Algorithms, and OOP. Experienced in building scalable backend systems and real-time applications using REST APIs, Firebase, and SQL. Currently expanding into iOS development with Swift/SwiftUI to build cross-platform solutions.",
   email: "divyanshsharma5070@gmail.com",
   /** Place your PDF at public/resume/Divyansh_Sharma_Resume.pdf */
-  resume: "/resume/Divyansh_Sharma_Resume.pdf",
-  resumeFileName: "Divyansh_Sharma_Resume.pdf",
+  resume: "/resume/Divyansh_sharma_resume.pdf",
+  resumeFileName: "Divyansh_sharma_resume.pdf",
   socials: [
     { label: "GitHub", url: "https://github.com/Divyansh5070", icon: Github },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/divyansh-sharma-12a52028a/", icon: Linkedin },
@@ -75,8 +75,8 @@ export const projects: Project[] = [
     images: [
       "/projects/campus-eats/1.png",
       "/projects/campus-eats/2.png",
-      "/projects/campus-eats/3.png",
       "/projects/campus-eats/4.png",
+      "/projects/campus-eats/3.png",
       "/projects/campus-eats/5.png"
     ],
     details: {
