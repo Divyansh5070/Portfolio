@@ -1,13 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
 
-interface ProjectScreenshotCarouselProps {
-  images: string[];
-  title: string;
-  accentColor: string;
-  onOpen: () => void;
-}
-
 const SLIDE_MS = 4500;
 
 export function ProjectScreenshotCarousel({
@@ -15,7 +8,7 @@ export function ProjectScreenshotCarousel({
   title,
   accentColor,
   onOpen,
-}: ProjectScreenshotCarouselProps) {
+}) {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const reduceMotion = useReducedMotion();
@@ -28,7 +21,7 @@ export function ProjectScreenshotCarousel({
     return () => window.clearInterval(id);
   }, [images.length, paused, reduceMotion]);
 
-  const goTo = (i: number) => {
+  const goTo = (i) => {
     setIndex(i);
   };
 

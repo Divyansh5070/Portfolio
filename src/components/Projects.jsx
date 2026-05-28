@@ -2,15 +2,14 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { projects } from "../data";
 import { Github, AppWindow } from "lucide-react";
-import type { Project } from "../types";
 import { ProjectDetail } from "./ProjectDetail";
 import { ProjectScreenshotCarousel } from "./ProjectScreenshotCarousel";
 import { PageContainer } from "./PageContainer";
 
 export function Projects() {
-  const [activeProject, setActiveProject] = useState<Project | null>(null);
+  const [activeProject, setActiveProject] = useState(null);
 
-  const getPlatformBadge = (type: string) => {
+  const getPlatformBadge = (type) => {
     if (type === "iOS") return "bg-cyan-950/25 border-cyan-900/60 text-cyan-400";
     if (type === "Android") return "bg-emerald-950/25 border-emerald-900/60 text-emerald-400";
     return "bg-indigo-950/25 border-indigo-900/60 text-indigo-400";
@@ -90,7 +89,7 @@ export function Projects() {
                   <h3 className="text-3xl md:text-4xl font-bold font-display text-white leading-tight group-hover:text-cyan-300 transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <p className="mt-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 group-hover:text-cyan-400 transition-colors">
+                  <p className="mt-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500 group-hover:text-cyan-400 transition-colors">
                     View full case study
                     <span className="h-px flex-1 max-w-[4rem] bg-zinc-700 group-hover:bg-cyan-400 transition-colors" />
                   </p>

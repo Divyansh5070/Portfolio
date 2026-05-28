@@ -2,7 +2,6 @@ import React from 'react';
 import { PhoneMockup } from './PhoneMockup';
 import { motion } from 'motion/react';
 import { Play, TrendingUp, Bell, Home, Search, User, CreditCard, ShoppingBag, Heart, Star, Target, Flame, Code } from 'lucide-react';
-import { ProjectDemoData } from '../types';
 
 export function FitnessAppDemo() {
   return (
@@ -179,11 +178,7 @@ const IconMap = {
   Code
 };
 
-interface GenericAppDemoProps {
-  demoData?: ProjectDemoData;
-}
-
-export function GenericAppDemo({ demoData }: GenericAppDemoProps) {
+export function GenericAppDemo({ demoData }) {
   const accentColor = demoData?.accentColor || '#06b6d4'; // default cyan
   const backgroundColor = demoData?.backgroundColor || '#09090b'; // default zinc-950
   const subtitle = demoData?.subtitle || 'Welcome back,';

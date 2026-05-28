@@ -1,11 +1,6 @@
 import React from 'react';
 
-interface PhoneMockupProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export function PhoneMockup({ children, className = '' }: PhoneMockupProps) {
+export function PhoneMockup({ children, className = '' }) {
   return (
     <div className={`relative mx-auto border-zinc-800 bg-zinc-950 border-[8px] rounded-[2.5rem] h-[550px] w-[270px] shadow-2xl shadow-cyan-900/10 overflow-hidden flex-shrink-0 ${className}`}>
       {/* Notch */}

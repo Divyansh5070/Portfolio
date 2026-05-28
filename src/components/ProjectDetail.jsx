@@ -1,13 +1,7 @@
 import { motion } from "motion/react";
 import { X, Github, AppWindow } from "lucide-react";
-import type { Project } from "../types";
 
-interface ProjectDetailProps {
-  project: Project;
-  onClose: () => void;
-}
-
-export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
+export function ProjectDetail({ project, onClose }) {
   const accent =
     project.demoData?.accentColor ||
     (project.type === "Android"
@@ -225,4 +219,3 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
     </motion.div>
   );
 }
-

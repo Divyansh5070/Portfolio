@@ -17,14 +17,14 @@ import { PageContainer } from './components/PageContainer';
 export default function App() {
   const shouldReduceMotion = useReducedMotion();
   const [cursorVisible, setCursorVisible] = useState(false);
-  const [cursorMode, setCursorMode] = useState<'free' | 'magnet'>('free');
+  const [cursorMode, setCursorMode] = useState('free');
 
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const targetX = useMotionValue(0);
   const targetY = useMotionValue(0);
 
-  const particlesRef = useRef<HTMLDivElement | null>(null);
+  const particlesRef = useRef(null);
   const lastParticleTs = useRef(0);
 
   const springConfig = useMemo(
@@ -55,7 +55,7 @@ export default function App() {
     const isCoarse = window.matchMedia?.('(pointer: coarse)').matches;
     if (isCoarse || shouldReduceMotion) return;
 
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMouseMove = (e) => {
       // Store raw client coords; we’ll center via CSS translate.
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
@@ -67,7 +67,7 @@ export default function App() {
     const handleEnter = () => setCursorVisible(true);
     const handleLeave = () => setCursorVisible(false);
 
-    const createBurst = (x: number, y: number) => {
+    const createBurst = (x, y) => {
       const host = particlesRef.current;
       if (!host) return;
       const count = 10;
@@ -88,7 +88,7 @@ export default function App() {
       }
     };
 
-    const handleClick = (e: MouseEvent) => {
+    const handleClick = (e) => {
       createBurst(e.clientX, e.clientY);
       const host = particlesRef.current;
       if (!host) return;
@@ -100,12 +100,12 @@ export default function App() {
       window.setTimeout(() => ripple.remove(), 650);
     };
 
-    const handleMoveSparks = (e: MouseEvent) => {
+    const handleMoveSparks = (e) => {
       const now = performance.now();
       if (now - lastParticleTs.current < 30) return;
       lastParticleTs.current = now;
-      const mx = (e as any).movementX ?? 0;
-      const my = (e as any).movementY ?? 0;
+      const mx = e.movementX ?? 0;
+      const my = e.movementY ?? 0;
       const spd = Math.hypot(mx, my);
       if (spd < 18) return;
       const host = particlesRef.current;
@@ -119,11 +119,11 @@ export default function App() {
       window.setTimeout(() => p.remove(), 420);
     };
 
-    const attachMagnetTo = (el: Element) => {
+    const attachMagnetTo = (el) => {
       const onEnter = () => setCursorMode('magnet');
       const onLeave = () => setCursorMode('free');
       const onMove = () => {
-        const rect = (el as HTMLElement).getBoundingClientRect();
+        const rect = el.getBoundingClientRect();
         targetX.set(rect.left + rect.width / 2);
         targetY.set(rect.top + rect.height / 2);
       };
@@ -149,7 +149,7 @@ export default function App() {
     window.addEventListener('mouseleave', handleLeave);
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mousemove', handleMoveSparks as any);
+      window.removeEventListener('mousemove', handleMoveSparks);
       window.removeEventListener('click', handleClick);
       window.removeEventListener('mouseenter', handleEnter);
       window.removeEventListener('mouseleave', handleLeave);

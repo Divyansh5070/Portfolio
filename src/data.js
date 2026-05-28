@@ -1,5 +1,4 @@
 import { Github, Linkedin, Mail } from "lucide-react";
-import { Project } from "./types";
 
 export const personalInfo = {
   name: "Divyansh Sharma",
@@ -47,7 +46,7 @@ export const experiences = [
 // Screenshots live in public/projects/<folder>/ (1.png, 2.png, …)
 // Add more images there and list the paths in `images` below.
 // ============================================================================
-export const projects: Project[] = [
+export const projects = [
   {
     id: "proj-campus-eats",
     title: "CUEats (Campus Eats)",

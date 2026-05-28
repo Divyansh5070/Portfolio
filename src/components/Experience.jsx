@@ -4,7 +4,7 @@ import { Briefcase, Layers } from "lucide-react";
 import { PageContainer } from "./PageContainer";
 
 export function Experience() {
-  const getSkillColor = (skill: string) => {
+  const getSkillColor = (skill) => {
     const s = skill.toLowerCase();
     if (s.includes("swift") || s.includes("ios") || s.includes("coredata") || s.includes("healthkit")) {
       return { dot: "bg-cyan-400 shadow-[0_0_6px_#22d3ee]", border: "hover:border-cyan-500/30 hover:bg-cyan-950/10 text-cyan-200" };
