@@ -71,11 +71,11 @@ export const projects = [
     simulatedUI: "generic",
     demoData: { accentColor: "#f59e0b" },
     images: [
-      "/projects/campus-eats/compressed/1.jpg",
-      "/projects/campus-eats/compressed/2.jpg",
-      "/projects/campus-eats/compressed/4.jpg",
-      "/projects/campus-eats/compressed/3.jpg",
-      "/projects/campus-eats/compressed/5.jpg"
+      "/projects/campus-eats/compressed/1.png",
+      "/projects/campus-eats/compressed/2.png",
+      "/projects/campus-eats/compressed/4.png",
+      "/projects/campus-eats/compressed/3.png",
+      "/projects/campus-eats/compressed/5.png"
     ],
     details: {
       role: "Solo Android Engineer & Product Owner",
@@ -121,9 +121,9 @@ export const projects = [
     simulatedUI: "generic",
     demoData: { accentColor: "#00D9FF" },
     images: [
-      "/projects/my-clock/compressed/1.jpg",
-      "/projects/my-clock/compressed/2.jpg",
-      "/projects/my-clock/compressed/3.jpg"
+      "/projects/my-clock/compressed/1.png",
+      "/projects/my-clock/compressed/2.png",
+      "/projects/my-clock/compressed/3.png"
     ],
     details: {
       role: "Solo Android Developer",
@@ -169,9 +169,9 @@ export const projects = [
     simulatedUI: "generic",
     demoData: { accentColor: "#a855f7" },
     images: [
-      "/projects/flatpool-manager/compressed/1.jpg",
-      "/projects/flatpool-manager/compressed/2.jpg",
-      "/projects/flatpool-manager/compressed/3.jpg"
+      "/projects/flatpool-manager/compressed/1.png",
+      "/projects/flatpool-manager/compressed/2.png",
+      "/projects/flatpool-manager/compressed/3.png"
     ],
     details: {
       role: "Full-stack Android Developer",
@@ -206,11 +206,11 @@ export const projects = [
     simulatedUI: "generic",
     demoData: { accentColor: "#34d399" },
     images: [
-      "/projects/positive/compressed/1.jpg",
-      "/projects/positive/compressed/2.jpg",
-      "/projects/positive/compressed/3.jpg",
-      "/projects/positive/compressed/4.jpg",
-      "/projects/positive/compressed/5.jpg"
+      "/projects/positive/compressed/1.png",
+      "/projects/positive/compressed/2.png",
+      "/projects/positive/compressed/3.png",
+      "/projects/positive/compressed/4.png",
+      "/projects/positive/compressed/5.png"
     ],
     details: {
       role: "Co-creator & iOS Developer",
