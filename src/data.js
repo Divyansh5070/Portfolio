@@ -5,7 +5,6 @@ export const personalInfo = {
   role: "Software Developer & Android Engineer",
   bio: "Software Engineering student with strong foundations in Data Structures, Algorithms, and OOP. Experienced in building scalable backend systems and real-time applications using REST APIs, Firebase, and SQL. Currently expanding into iOS development with Swift/SwiftUI to build cross-platform solutions.",
   email: "divyanshsharma5070@gmail.com",
-  /** Place your PDF at public/resume/Divyansh_Sharma_Resume.pdf */
   resume: "/resume/Divyansh_sharma_resume.pdf",
   resumeFileName: "Divyansh_sharma_resume.pdf",
   socials: [
@@ -29,7 +28,7 @@ export const experiences = [
     role: "Founding Developer | Android Engineer",
     company: "CUEats (Campus Eats)",
     duration: "Jan 2025 - Present",
-    description: "Solo-built and shipped a production Android app on the Play Store used by 50+ students at Chandigarh University. Built mess menus, shops, events, campus map, FCM meal notifications via Cloud Functions, and a Glance home-screen widget — full stack with Firebase, Jetpack Compose, and type-safe Navigation Compose."
+    description: "Solo-built and shipped a production Android app on the Play Store used by 100+ students at Chandigarh University. Built mess menus, shops, events, campus map, FCM meal notifications via Cloud Functions, and a Glance home-screen widget — full stack with Firebase, Jetpack Compose, and type-safe Navigation Compose."
   },
   {
     id: "exp-2",
@@ -51,7 +50,7 @@ export const projects = [
     id: "proj-campus-eats",
     title: "CUEats (Campus Eats)",
     description:
-      "Solo-built campus food app shipped to the Play Store — mess menus, shops & canteens, events, OSM campus map, smart meal notifications, budget tracker, and a Glance widget. Used by 50+ students at Chandigarh University.",
+      "Solo-built campus food app shipped to the Play Store — mess menus, shops & canteens, events, OSM campus map, smart meal notifications, budget tracker, and a Glance widget. Used by 100+ students at Chandigarh University.",
     type: "Android",
     technologies: [
       "Kotlin",
@@ -72,15 +71,15 @@ export const projects = [
     simulatedUI: "generic",
     demoData: { accentColor: "#f59e0b" },
     images: [
-      "/projects/campus-eats/1.png",
-      "/projects/campus-eats/2.png",
-      "/projects/campus-eats/4.png",
-      "/projects/campus-eats/3.png",
-      "/projects/campus-eats/5.png"
+      "/projects/campus-eats/compressed/1.jpg",
+      "/projects/campus-eats/compressed/2.jpg",
+      "/projects/campus-eats/compressed/4.jpg",
+      "/projects/campus-eats/compressed/3.jpg",
+      "/projects/campus-eats/compressed/5.jpg"
     ],
     details: {
       role: "Solo Android Engineer & Product Owner",
-      timeline: "1.5 years • Play Store • 50+ active users",
+      timeline: "1.5 years • Play Store • 100+ active users",
       stackSummary:
         "Kotlin, Jetpack Compose, Material 3, Firebase (Auth, Firestore, Realtime DB, Storage, FCM), Cloud Functions for scheduled meal notifications, OSMDroid maps, Coil, Glance widgets, WorkManager, DataStore.",
       challenges: [
@@ -122,9 +121,9 @@ export const projects = [
     simulatedUI: "generic",
     demoData: { accentColor: "#00D9FF" },
     images: [
-      "/projects/my-clock/1.png",
-      "/projects/my-clock/2.png",
-      "/projects/my-clock/3.png"
+      "/projects/my-clock/compressed/1.jpg",
+      "/projects/my-clock/compressed/2.jpg",
+      "/projects/my-clock/compressed/3.jpg"
     ],
     details: {
       role: "Solo Android Developer",
@@ -170,9 +169,9 @@ export const projects = [
     simulatedUI: "generic",
     demoData: { accentColor: "#a855f7" },
     images: [
-      "/projects/flatpool-manager/1.png",
-      "/projects/flatpool-manager/2.png",
-      "/projects/flatpool-manager/3.png"
+      "/projects/flatpool-manager/compressed/1.jpg",
+      "/projects/flatpool-manager/compressed/2.jpg",
+      "/projects/flatpool-manager/compressed/3.jpg"
     ],
     details: {
       role: "Full-stack Android Developer",
@@ -193,6 +192,53 @@ export const projects = [
         "Real-time collaborative apps need clear permission models from day one.",
         "Firebase Realtime Database fits chat and live balance updates well.",
         "Shipping for people you live with is the fastest feedback loop."
+      ]
+    }
+  },
+  {
+    id: "proj-positive",
+    title: "Positive",
+    description:
+      "iOS DSA practice journal built with a friend — log every problem you solve (platform, difficulty, topic, and your approach in your own words), track streaks, view analytics, and compare progress with friends. Intentional logging over mindless grinding.",
+    type: "iOS",
+    technologies: ["Swift", "SwiftUI", "Firebase"],
+    links: {},
+    simulatedUI: "generic",
+    demoData: { accentColor: "#34d399" },
+    images: [
+      "/projects/positive/compressed/1.jpg",
+      "/projects/positive/compressed/2.jpg",
+      "/projects/positive/compressed/3.jpg",
+      "/projects/positive/compressed/4.jpg",
+      "/projects/positive/compressed/5.jpg"
+    ],
+    details: {
+      role: "Co-creator & iOS Developer",
+      timeline: "2025 • Built to fix our own DSA consistency problem",
+      stackSummary:
+        "Swift, SwiftUI, Firebase — native iOS app focused on manual, intentional problem logging (no auto-sync APIs).",
+      challenges: [
+        "Solving the same problems twice because approaches were never written down.",
+        "Building streak and calendar views that reflect real consistency, not vanity metrics.",
+        "Designing friend comparison and analytics without overwhelming the core journaling flow."
+      ],
+      solutions: [
+        "Manual logging of problem name, platform, difficulty, topic, and personal approach — writing forces retention.",
+        "Calendar view for active days, streak tracking, and analytics (accuracy, avg solve time, topic mastery).",
+        "Firebase backend for auth and data; SwiftUI for a fast, native mobile experience on the go."
+      ],
+      learnings: [
+        "Tracking what you solve matters less than capturing how you solved it.",
+        "Tools you build for yourself often resonate most with peers who share the same pain.",
+        "SwiftUI + Firebase is a strong stack for student-built productivity apps."
+      ],
+      highlights: [
+        "Write your approach so future-you remembers",
+        "Calendar view — active days at a glance",
+        "Streak tracking for real consistency",
+        "Analytics — accuracy, solve time, topic mastery",
+        "Friend comparison — compete and grow together",
+        "Works with LeetCode, Codeforces, GFG, CSES, and more"
       ]
     }
   }

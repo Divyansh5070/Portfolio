@@ -56,6 +56,7 @@ export function ProjectScreenshotCarousel({
               src={src}
               alt={`${title} screenshot ${i + 1}`}
               className="project-screenshot__slide"
+              loading="lazy"
               initial={false}
               animate={{
                 opacity: isActive ? 1 : 0,

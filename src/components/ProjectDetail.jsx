@@ -86,6 +86,7 @@ export function ProjectDetail({ project, onClose }) {
                       src={src}
                       alt={`${project.title} screen ${index + 1}`}
                       className="w-full h-full object-contain object-top bg-zinc-950"
+                      loading="lazy"
                     />
                   </motion.div>
                 ))}
@@ -126,6 +127,24 @@ export function ProjectDetail({ project, onClose }) {
                   ))}
                 </div>
               </div>
+            </div>
+          )}
+
+          {project.details?.highlights && project.details.highlights.length > 0 && (
+            <div className="space-y-3">
+              <p className="text-xs font-semibold text-zinc-400 tracking-[0.24em] uppercase">
+                Features
+              </p>
+              <ul className="grid gap-2 sm:grid-cols-2">
+                {project.details.highlights.map((item, idx) => (
+                  <li
+                    key={idx}
+                    className="text-sm text-zinc-300 leading-relaxed px-3 py-2 rounded-xl bg-zinc-900/40 border border-zinc-800/60"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
 
@@ -175,45 +194,42 @@ export function ProjectDetail({ project, onClose }) {
             )}
           </div>
 
-          {/* Links */}
-          {(project.links.github || project.links.appStore) && (
-            <div className="pt-2 border-t border-zinc-800/70 flex flex-wrap items-center justify-between gap-3 text-sm">
-              <div className="flex flex-wrap gap-4">
-                {project.links.github && (
-                  <a
-                    href={project.links.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-zinc-300 hover:text-white transition-colors"
-                  >
-                    <Github className="w-4 h-4" />
-                    <span className="underline underline-offset-4 decoration-zinc-600 hover:decoration-zinc-300">
-                      View source code
-                    </span>
-                  </a>
-                )}
-                {project.links.appStore && (
-                  <a
-                    href={project.links.appStore}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-zinc-300 hover:text-white transition-colors"
-                  >
-                    <AppWindow className="w-4 h-4" />
-                    <span className="underline underline-offset-4 decoration-zinc-600 hover:decoration-zinc-300">
-                      View live app
-                    </span>
-                  </a>
-                )}
-              </div>
-              <button
-                onClick={onClose}
-                className="text-xs text-zinc-400 hover:text-white transition-colors"
-              >
-                Close
-              </button>
+          <div className="pt-2 border-t border-zinc-800/70 flex flex-wrap items-center justify-between gap-3 text-sm">
+            <div className="flex flex-wrap gap-4">
+              {project.links.github && (
+                <a
+                  href={project.links.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-zinc-300 hover:text-white transition-colors"
+                >
+                  <Github className="w-4 h-4" />
+                  <span className="underline underline-offset-4 decoration-zinc-600 hover:decoration-zinc-300">
+                    View source code
+                  </span>
+                </a>
+              )}
+              {project.links.appStore && (
+                <a
+                  href={project.links.appStore}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-zinc-300 hover:text-white transition-colors"
+                >
+                  <AppWindow className="w-4 h-4" />
+                  <span className="underline underline-offset-4 decoration-zinc-600 hover:decoration-zinc-300">
+                    View live app
+                  </span>
+                </a>
+              )}
             </div>
-          )}
+            <button
+              onClick={onClose}
+              className="text-xs text-zinc-400 hover:text-white transition-colors"
+            >
+              Close
+            </button>
+          </div>
         </div>
       </motion.div>
     </motion.div>

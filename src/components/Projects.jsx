@@ -22,7 +22,7 @@ export function Projects() {
         <div className="w-12 h-1 bg-gradient-to-r from-cyan-400 to-indigo-500 rounded-full mb-6"></div>
         <h2 className="text-3xl md:text-5xl font-bold font-display text-white">Featured Work</h2>
         <p className="text-zinc-400 mt-4 text-lg max-w-3xl">
-          Android apps I've designed, built, and shipped. Click any project to open the full case study with screenshots, stack, and challenges.
+          Mobile apps I've designed, built, and shipped — Android & iOS. Click any project to open the full case study with screenshots, stack, and challenges.
         </p>
       </div>
 
